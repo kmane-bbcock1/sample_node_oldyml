@@ -1,7 +1,7 @@
 # Language setting
 language: node_js
 
-build_image: drydock/u14nod:prod
+build_image: shippable/minv2
 
 # Version number
 node_js:
@@ -35,3 +35,5 @@ script:
 after_script:
   - ./node_modules/.bin/istanbul cover grunt -- -u tdd
   - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
+  
+cache: true
